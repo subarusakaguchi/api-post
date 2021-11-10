@@ -1,0 +1,11 @@
+import { UsersRepository } from '../../../repositories/implementations/UsersRepository';
+import { TurnAdminController } from './TurnAdminController';
+import { TurnAdminUseCase } from './TurnAdminUseCase';
+
+const userRepository = UsersRepository.getInstance();
+
+const turnAdminUseCase = new TurnAdminUseCase(userRepository);
+
+const turnAdminController = new TurnAdminController(turnAdminUseCase);
+
+export { turnAdminController };
