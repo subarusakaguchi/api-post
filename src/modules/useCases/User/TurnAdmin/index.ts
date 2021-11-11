@@ -2,9 +2,9 @@ import { UsersRepository } from '../../../repositories/implementations/UsersRepo
 import { TurnAdminController } from './TurnAdminController';
 import { TurnAdminUseCase } from './TurnAdminUseCase';
 
-const userRepository = UsersRepository.getInstance();
+const usersRepository = UsersRepository.getInstance();
 
-const turnAdminUseCase = new TurnAdminUseCase(userRepository);
+const turnAdminUseCase = new TurnAdminUseCase(usersRepository);
 
 const turnAdminController = new TurnAdminController(turnAdminUseCase);
 

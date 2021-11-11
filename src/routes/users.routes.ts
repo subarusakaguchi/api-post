@@ -7,19 +7,19 @@ import { turnAdminController } from '../modules/useCases/User/TurnAdmin';
 
 const usersRouter = Router();
 
-usersRouter.post('/users', (req, res) => {
+usersRouter.post('/', (req, res) => {
     return createUserController.handle(req, res);
 });
 
-usersRouter.patch('/users/:user_id/admin', (req, res) => {
+usersRouter.patch('/:user_id/admin', (req, res) => {
     return turnAdminController.handle(req, res);
 });
 
-usersRouter.get('/users', (req, res) => {
+usersRouter.get('/', (req, res) => {
     return listUsersController.handle(req, res);
 });
 
-usersRouter.delete('/users/:user_id/delete', (req, res) => {
+usersRouter.delete('/:user_id/delete', (req, res) => {
     return deleteUserController.handle(req, res);
 });
 

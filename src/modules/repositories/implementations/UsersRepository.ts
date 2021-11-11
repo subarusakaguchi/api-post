@@ -2,7 +2,7 @@ import { User } from '../../model/User';
 import { ICreateUserDTO, IUsersRepository } from '../IUsersRepository';
 
 class UsersRepository implements IUsersRepository {
-    private users: User[] = [];
+    private users: User[];
 
     private static INSTANCE: UsersRepository;
 
